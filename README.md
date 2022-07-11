@@ -4,16 +4,16 @@ Como já foi informado, você e sua equipe irão desenvolver um projeto durante 
 
 ## Principais conceitos
 
-- OOP
+### OOP
 
-  1.  Sintaxe de classe
-  2.  Classes estáticas
+  #### 1.  Sintaxe de classe
+  #### 2.  Classes estáticas
 
-- Spread Operator
-- Desconstrução
-- Consumo de API;
-- LocalStorage.
-- Manipulação dos elementos com o DOM
+### Spread Operator
+### Desconstrução
+### Consumo de API;
+### LocalStorage.
+### Manipulação dos elementos com o DOM
 
 ## Requisitos técnicos/funcionalidades
 
