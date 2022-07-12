@@ -1,39 +1,37 @@
 import Habits from "../controller/habits.controller.js";
 
+/* ---------- GET ALL Habits ---------- */
 // const habits = await Habits.getHabits();
 // console.log(habits);
 
+/* ---------- GET Habits by Category ---------- */
 // const saude = await Habits.getHabitsByCat("saude");
 // console.log(saude);
 
 // const lazer = await Habits.getHabitsByCat("lazer");
 // console.log(lazer);
 
+/* ---------- POST Habits ---------- */
+// const habitoTeste = {
+// 	"habit_title": "bater ponto corretamente",
+// 	"habit_description": "bater ponto todos os dias nos horários corretos",
+// 	"habit_category": "Saude",
+// };
+
 // console.log(await Habits.createHabit(habitoTeste));
 
+/* ---------- DELETE Habits ---------- */
 // console.log(await Habits.deleteHabit(369));
 
-/*
+/* ---------- PATCH - Complete Habits ---------- */
+// console.log(await Habits.completeHabit(367))
 
-habit_category: "saude"
-habit_description: "correr todos os dias na praia da barra nos horários corretos para que assim, eu possa ter uma vida mais saudável"
-habit_id: 367
-habit_status: false
-habit_title: "correr na praia da barra"
+/* ---------- PATCH - Edit Habits ---------- */
+// const editTeste = {
+// 	"habit_title": "Jogar volei aos domingos no parque Marina",
+// 	"habit_description":
+// 		"Ir aos domingos com a família no parque Marina e aproveitar para jogar vôlei de areia",
+// 	"habit_category": "lazer",
+// };
 
-
-habit_category: "lazer"
-habit_description: "exercitar mais meus hobbies para que eles se tornem mais fortes e melhores."
-habit_id: 368
-habit_status: false
-habit_title: "exercicar mais meus hobbies"
-
-
-// Deletado para Teste do DELETE
-habit_category: "lazer"
-habit_description: "exercitar mais meus hobbies para que eles se tornem mais fortes e melhores."
-habit_id: 369
-habit_status: false
-habit_title: "exercicar mais meus hobbies"
-
-*/
+// console.log(await Habits.updateHabit(367, editTeste));
