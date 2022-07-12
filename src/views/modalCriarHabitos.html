@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/modalCriarHábitos.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="modal_habits">
+        <div class="upside">
+            <h1>Criar Hábito</h1>
+            <div class="close_card_div">
+                <i class="close_card_button">x</i>
+            </div>
+            
+        </div>
+        <form class="modal_form">
+            <label for="Título" class="text">Título</label>
+            <input type="text" name="Título" id="title" placeholder="Digitar Título">
+            
+            <label for="Descrição" class="text">Descrição</label>
+            <input type="text" name="Descrição" id="description" placeholder="Digitar descrição">
+            
+            <label for="category" class="text">Categoria</label>
+            <select id="category" name="category">
+                <option  selected disabled>Selecionar Categoria</option>
+                <option value="saude">Saúde</option>
+                <option value="estudos">Estudos</option>
+                <option value="casa">Casa</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="lazer">Lazer</option>
+            </select>
+            
+           <button type="submit" class="send" >Inserir</button>
+         </form>
+      
+    </div>
+    <button class="open_modal">Abrir Modal</button>
+</body>
+<script type="module" src="../controller/modal.js"></script>
+</html>

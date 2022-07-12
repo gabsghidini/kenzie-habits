@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    background-color: darkgray;
+}
+.modal_habits{
+    overflow: hidden;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.5rem 0.875rem;
+    width: 15.5rem ;
+    right: 1.5rem;
+    gap: 2rem;
+}
+
+.upside{
+
+    display: flex;
+    align-items: baseline;
+    width: 18rem;
+    justify-content: space-around;
+}
+
+h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #212529;
+
+}
+.close_card_button{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #ADB5BD;
+}
+.modal_form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0.875rem;
+    gap: 2rem;
+   
+}
+
+.text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #343A40;
+
+   
+}
+#title{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-size: 0.875;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    width: 17.313;
+    height: 2.5rem;
+   
+}
+
+#description{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-size: 0.875;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    width: 17.313;
+    height: 5rem;
+
+
+}
+#category{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    width: 17.313;
+    height: 2.5rem;
+}
+.send{
+    background: #415AF3;
+    border: 0.125rem solid #415AF3;
+    border-radius: 0.25rem;
+    width: 16rem;
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    color: white;
+}
