@@ -25,7 +25,6 @@ function addOnClickEvents() {
 }
 
  function openModal(elementToOpen) {
-    console.log(document.querySelector(elementToOpen))
     document.querySelector(elementToOpen).style.display = "flex"
 }
 
