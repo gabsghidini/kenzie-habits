@@ -15,6 +15,8 @@ class entrar {
 
   static logout() {
     localStorage.clear();
+
+    window.location.href = "../index.html";
   }
 }
 
@@ -28,3 +30,4 @@ btnLogin.addEventListener("click", function (event) {
     window.location.href = "./homepage.html";
   }
 });
+
