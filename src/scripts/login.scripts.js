@@ -23,4 +23,8 @@ const btnLogin = document.querySelector("#btnLogin");
 btnLogin.addEventListener("click", function (event) {
 	event.preventDefault();
 	entrar.logIn();
+
+  if (localStorage.getItem("@kenzie-habits:token")) {
+    window.location.href = "./homepage.html";
+  }
 });
