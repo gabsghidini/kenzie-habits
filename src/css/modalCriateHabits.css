@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body{
-    background-color: darkgray;
+    background-color: rgb(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .modal_habits{
-    overflow: hidden;
+    width: 15.5rem;
     background-color: white;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     padding: 1.5rem 0.875rem;
-    width: 15.5rem ;
-    right: 1.5rem;
-    gap: 2rem;
 }
+
 
 .upside{
 
@@ -39,13 +39,15 @@ h1{
     font-weight: 500;
     font-size: 1.25rem;
     color: #ADB5BD;
+    cursor: pointer;
 }
 .modal_form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5rem 0.875rem;
-    gap: 2rem;
+    gap: 1.1rem;
+
    
 }
 
@@ -53,8 +55,8 @@ h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.063rem;
+    font-size: 0.775rem;
+    line-height: 0.5rem;
     color: #343A40;
 
    
@@ -65,12 +67,11 @@ h1{
     border: 0.125rem solid #F1F3F5;
     border-radius: 0.25rem;
     color: #343A40;
-    font-size: 0.875;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    width: 17.313;
     height: 2.5rem;
+    width: 15.5rem;
    
 }
 
@@ -84,7 +85,7 @@ h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    width: 17.313;
+    width: 100%;
     height: 5rem;
 
 
@@ -99,8 +100,9 @@ h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    width: 17.313;
     height: 2.5rem;
+    cursor: pointer;
+    width: 100%;
 }
 .send{
     background: #415AF3;
@@ -111,4 +113,37 @@ h1{
     font-family: 'Inter';
     font-style: normal;
     color: white;
+    cursor: pointer;
+}
+.send:hover{
+    background: white;
+    border: 0.025rem solid #415AF3;
+    color: #415AF3;
+    transition: 150ms;
+}
+@media(min-width:769px) {
+    
+    .modal_habits{
+        width: 29.5rem;
+    }
+    
+    .modal_form{
+        
+        width: 27.5rem;
+    
+    } 
+    .upside{
+        width: 27.5rem;
+        justify-content: space-between;
+    }
+   
+    #title{   
+        width:27.5rem;
+    }
+    
+    .send{
+        width: 27.5rem;
+    }
+    
+
 }

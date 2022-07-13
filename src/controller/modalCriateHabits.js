@@ -33,8 +33,7 @@ function sendHabits(event){
     let categoryValue = document.querySelector("#category").value;
     
     let habit = new Habit("", titleValue, descriptionValue, categoryValue, "")
-    
-    console.log(Habits.createHabit(habit))
+
 }
 
 export default {closeModal, openModal, sendHabits}
