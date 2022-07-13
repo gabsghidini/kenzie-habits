@@ -24,8 +24,9 @@ function addOnClickEvents() {
     document.querySelector(elementToClose).style.display = "none"
 }
 
- function openModal(elementToClose) {
-    document.querySelector(elementToClose).style.display = "flex"
+ function openModal(elementToOpen) {
+    console.log(document.querySelector(elementToOpen))
+    document.querySelector(elementToOpen).style.display = "flex"
 }
 
 async function sendHabits(event){
