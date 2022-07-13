@@ -4,5 +4,6 @@ export default class Habit {
         this.habit_title = tittle;
         this.habit_description = description;
         this.habit_category = category;
+        this.habit_status = status;
     }
 }
