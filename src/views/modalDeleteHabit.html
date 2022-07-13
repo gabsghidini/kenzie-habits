@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/modal.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="body_modal">
+    <div class="modal_habits--delete" id="modal_box" >
+            <div class="upside">
+                <h1>Excluir hábito</h1>
+                <div class="close_card_div">
+                    <i class="close_card_button">x</i>
+                </div>
+                
+            </div>
+
+            <h2>Certeza que deseja excluir esse hábito?</h2>
+            <h3>Após executar essa ação não será possível desfazer</h3>
+
+            <form class="modal_form_delete">
+
+            <button type="submit" class="sendDecision" id="cancel" >Cancelar</button>
+            
+            <button type="submit" class="sendDecision" id="delete">Sim, excluir esse hábito</button>
+            
+            </form>
+        
+        </div>
+   </div>
+   
+</body>
+<script type="module" src="../controller/modalDeteteHabit.js"></script>
+</html>

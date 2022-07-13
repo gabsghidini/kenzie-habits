@@ -1,15 +1,19 @@
 import Habit from "../models/habit.models.js";
 import Habits from "./habits.controller.js";
 
-
 document.addEventListener("DOMContentLoaded", addOnClickEvents);
 
 function addOnClickEvents() {
-    let openModalButton = document.querySelector(".open_modal")
-    openModalButton.addEventListener("click", function(){openModal('.modal_habits')})
+    //closeModal('.modal_habits')
+console.log(11111111111111111111111)
+    let criarHabitButton = document.querySelector(".container--title--buttonCriar")
+    criarHabitButton.addEventListener("click", function(){openModal('.modal_habits')})
 
+    
     let closeModalButton = document.querySelector(".close_card_div")
     closeModalButton.addEventListener("click", function(){closeModal('.modal_habits')})
+
+    
 
     let modalForm = document.querySelector(".modal_form")
     modalForm.addEventListener("submit", function(e){sendHabits(e)})
@@ -36,4 +40,4 @@ function sendHabits(event){
 
 }
 
-export default {closeModal, openModal, sendHabits}
+export default {addOnClickEvents,closeModal, openModal, sendHabits}
