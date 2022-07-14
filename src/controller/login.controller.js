@@ -23,4 +23,10 @@ export default class Login {
 			})
 			.catch((err) => console.log(err));
 	}
+
+	static logout() {
+		localStorage.clear();
+	
+		window.location.href = "../index.html";
+	  }
 }

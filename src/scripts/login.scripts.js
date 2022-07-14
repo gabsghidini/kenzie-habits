@@ -1,6 +1,6 @@
 import Login from "../controller/login.controller.js";
 
-class entrar {
+export default class entrar {
 	static logIn() {
 		const email = document.getElementById("email").value;
 		const password = document.getElementById("password").value;
@@ -13,11 +13,7 @@ class entrar {
 		Login.requestLogin(data);
 	}
 
-  static logout() {
-    localStorage.clear();
-
-    window.location.href = "../index.html";
-  }
+  
 }
 
 const btnLogin = document.querySelector("#btnLogin");

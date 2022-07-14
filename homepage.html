@@ -24,7 +24,15 @@
 	<body>
 		<header>
 			<p>KenzieHabit</p>
-			<figure><img class="user__image--header" src="#" /></figure>
+			
+			<div class="dropdown">
+				<button class="dropbtn" id="btnDrop"><img src="src/assets/img/" alt=""></button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="#" id="editProfile">Editar Perfil</a>
+					<a href="#" id="logout">Sair do app</a>
+
+				</div>
+			</div>
 		</header>
 		<main>
 			<section id="userDate">
@@ -34,6 +42,40 @@
 
 			<section id="container"></section>
 		</main>
-		<script type="module" src="./src/scripts/homepage.scripts.js"></script>
+		<div class="body_modal">
+			<div class="modal_editar--perfil" id="modal_box">
+				<div class="upside">
+					<h1>Editar Perfil</h1>
+					<div class="close_card_div">
+						<i class="close_card_button">x</i>
+					</div>
+				</div>
+				<form class="modal_form">
+					<label for="Nome" class="text">Nome</label>
+					<input
+						type="text"
+						name="Nome"
+						id="name"
+						placeholder="Digitar Nome"
+					/>
+
+					<label for="URL" class="text"
+						>URL da imagem do perfil</label
+					>
+					<input
+						type="url"
+						name="url"
+						id="url"
+						placeholder="Digitar URL"
+					/>
+
+					<button type="submit" class="send">
+						Salvar Alterações
+					</button>
+				</form>
+			</div>
+		</div>
+		<script type="module" src="./src/scripts/homepage.scripts.js">
+		</script>
 	</body>
 </html>
