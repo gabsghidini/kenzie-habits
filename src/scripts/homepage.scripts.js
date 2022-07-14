@@ -36,7 +36,6 @@ function logOut() {
 logOut();
 
 const incomplete = await Habits.onlyIncompleteHabits();
-
 HomepageController.listCards(incomplete);
 
 //Adiciona modal Create Habits
@@ -109,11 +108,10 @@ function init() {
 	HomepageController.loadUserData();
 
 	setTimeout(() => {
-		console.log(
-			"2 segundos depois do carregamento da pagina, os listeners são ativados"
-		);
-		HomepageController.habitCompletionController();
+		console.log("2 segundos depois do carregamento da pagina, os listeners são ativados");
 		listenersForHabits();
+		HomepageController.habitCompletionController();
+		console.log("Ativados os listeners");
 	}, 2000);
 }
 init();

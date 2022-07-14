@@ -37,7 +37,9 @@ class HomepageController {
 		const user = JSON.parse(userData);
 
 		const userHeader = document.querySelector(".user__image--header");
-		const userProfileImage = document.querySelector(".user__image--profile");
+		const userProfileImage = document.querySelector(
+			".user__image--profile"
+		);
 
 		const userProfileName = document.querySelector(".user__name");
 
@@ -49,16 +51,12 @@ class HomepageController {
 	static habitCompletionController() {
 		const checkbox = document.querySelectorAll(".checkbox");
 		checkbox.forEach((item) => {
-			item.addEventListener("change", function () {
-				if (this.checked) {
-					const habitId = this.id;
-					Habits.completeHabit(habitId);
-					HomepageController.habitCompletionController();
-				} else {
-					const habitId = this.id;
-					Habits.uncompleteHabit(habitId);
-					HomepageController.habitCompletionController();
-				}
+			item.addEventListener("change", (e) => {
+				const habitId = e.target.id;
+				
+				Habits.completeHabit(habitId);
+				window.alert("Habito concluído!");
+				HomepageController.habitCompletionController();
 			});
 		});
 	}

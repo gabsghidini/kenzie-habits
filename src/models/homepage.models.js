@@ -84,8 +84,10 @@ export default class Homepage {
 		dataEdit.id = "edit_" + this.id;
 		dataEdit.setAttribute("onclick", "loadEditModal('"+this.id+"')"); 
 
+		const id = this.id;
 		dataInput.type = "checkbox";
-		dataInput.id = this.id;	
+		dataInput.id = id;	
+		dataInput.classList.add("checkbox")
 		dataInput.name = "checkbox" + this.id;
 		dataInput.value = "checkbox" + this.id;
 		
