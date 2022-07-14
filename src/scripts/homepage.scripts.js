@@ -33,6 +33,8 @@ function logOut() {
 	});
 }
 
+logOut();
+
 const incomplete = await Habits.onlyIncompleteHabits();
 
 HomepageController.listCards(incomplete);
