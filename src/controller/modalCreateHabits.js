@@ -15,7 +15,7 @@ function addOnClickEvents() {
     closeModalButton1.addEventListener("click", function(){closeModal('.body_modal')})
  
 
-    let modalForm = document.querySelector(".modal_form")
+    let modalForm = document.querySelector(".modal_create")
     modalForm.addEventListener("submit", function(e){sendHabits(e)})
 
 }
