@@ -1,4 +1,4 @@
-class Homepage {
+export default class Homepage {
 	constructor(id, title, description, category, status) {
 		this.id = id;
 		this.title = title;
@@ -84,7 +84,6 @@ class Homepage {
 		dataInput.name = "checkbox" + this.id;
 		dataInput.value = "checkbox" + this.id;
 		
-	
 		if (this.status) {
 			dataInput.checked = true
 		}
@@ -113,13 +112,16 @@ class Homepage {
 
 	getCardFooter() {
 		const footer = document.createElement("div");
-		const footerButton = document.createElement("button");
+		const footerButton = document.createElement("input");
 	
 		footerButton.classList.add("container--habits--footer--btn");
 		footer.classList.add("container--habits--footer");
-		
-		
-		footerButton.innerText = "Atualizar";
+
+	
+		footerButton.value = "Atualizar"
+		footerButton.id = "btnReload"
+		footerButton.type = "button"
+		footerButton.setAttribute("onclick", "window.location.reload()");
 		footer.append(footerButton);
 
 		return footer;
@@ -127,4 +129,4 @@ class Homepage {
 }
 
 
-export default Homepage;
+
