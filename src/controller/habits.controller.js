@@ -141,4 +141,16 @@ export default class Habits {
 			.then((res) => res)
 			.catch((err) => console.log(err));
 	}
+
+	static async onlyCompleteHabits () {
+		const habits = await Habits.getHabits();
+
+		const onlyCompleteHabits = habits.filter((habit) => {
+			return habit.habit_status === true;
+		})
+
+		return onlyCompleteHabits;
+	}
 }
+
+Habits.onlyCompleteHabits();

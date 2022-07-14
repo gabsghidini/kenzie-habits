@@ -10,7 +10,7 @@ main {
 }
 /* Header */
 header {
-	color: #415af3;
+	color: var(--color-brand-1);
 	margin-left: auto;
 	margin-right: auto;
 	height: max-content;
@@ -103,11 +103,11 @@ header img {
 }
 /* User */
 #userDate {
-	background-color: #415af3;
+	background-color: var(--color-brand-1);
 	display: flex;
 	height: 183px;
 	align-items: center;
-	color: #ffffff;
+	color: var(--color-grey-6);
 	font-weight: 600;
 	font-size: 20px;
 }
@@ -166,19 +166,31 @@ header img {
 	font-size: 16px;
 }
 .container--title--buttonTodos {
-	color: #343a40;
+	color: var(--color-grey-2);
 	background-color: #ffffff;
+
 }
-.container--title--buttonConcludos {
-	color: #343a40;
+.container--title--buttonConcluidos {
+	color: var(--color-grey-2);
 	background-color: #ffffff;
 }
 .container--title--buttonCriar {
-	background-color: #415af3;
-	color: #ffffff;
+	background: linear-gradient(to left, var(--color-brand-1) 50%, var(--color-brand-3) 50%);
+  	background-size: 200% 100%;
+  	background-position: right bottom;
+  	transition: all .5s ease-out;
+	color: var(--color-grey-6);
 	padding: 12px 28px;
-	border: 2px solid #415af3;
+	border: 2px solid var(--color-brand-1);
 	border-radius: 4px;
+	transition-property: all;
+	transition-duration: 1s;
+
+}
+
+.container--title--buttonCriar:hover {
+	background-position: left bottom;
+	color: var(--color-brand-1);
 }
 
 /* Container Habits */
@@ -239,7 +251,7 @@ header img {
 	border: 1.4px solid #ebebeb;
 	border-radius: 4px;
 	width: 85%;
-	color: #343a40;
+	color: var(--color-grey-2);
 	font-weight: 500;
 	font-size: 16px;
 	height: 50px;
@@ -252,6 +264,8 @@ header img {
 	display: flex;
 	align-self: center;
 }
+
+
 
 :checked + p {
 	text-decoration: line-through;
@@ -292,8 +306,8 @@ header img {
 }
 
 .container--habits--dataCategory span {
-	color: #415af3;
-	background: #d7e4fb;
+	color: var(--color-brand-1);
+	background: var(--color-brand-3);
 	border-radius: 4px;
 	font-weight: 500;
 	padding: 5px 12px;
@@ -310,8 +324,8 @@ header img {
 }
 
 .container--habits--dataEdit button {
-	background-color: #ffffff;
-	color: #adb5bd;
+	background-color: var(--color-grey-6);
+	color: var(--color-grey-3);
 	border: none;
 	font-size: 36px;
 	margin-left: 3%;
@@ -323,12 +337,13 @@ header img {
 }
 
 .container--habits--footer button {
-	background-color: #415af3;
-	color: #ffffff;
-	border: 2px solid #415af3;
+	background-color: var(--color-brand-1);
+	color: var(--color-grey-6);
+	border: 2px solid var(--color-brand-1);
 	font-size: 14px;
 	border-radius: 4px;
 	padding: 12px 28px;
+	margin-bottom: 2%;
 }
 
 @media screen and (max-width: 768px) {
@@ -341,7 +356,7 @@ header img {
 	}
 
 	header {
-		color: #415af3;
+		color: var(--color-brand-1);
 		margin-left: auto;
 		margin-right: auto;
 		height: 45px;
@@ -363,11 +378,11 @@ header img {
 
 	/* User */
 	#userDate {
-		background-color: #415af3;
+		background-color: var(--color-brand-1);
 		display: flex;
 		height: 183px;
 		align-items: center;
-		color: #ffffff;
+		color: var(--color-grey-6);
 		font-weight: 600;
 		font-size: 20px;
 	}
@@ -418,21 +433,6 @@ header img {
 		margin-top: 10%;
 	}
 
-	.container--title--buttonTodos {
-		color: #343a40;
-		background-color: #ffffff;
-	}
-	.container--title--buttonConcludos {
-		color: #343a40;
-		background-color: #ffffff;
-	}
-	.container--title--buttonCriar {
-		background-color: #415af3;
-		color: #ffffff;
-		padding: 12px 28px;
-		border: 2px solid #415af3;
-		border-radius: 4px;
-	}
 
 	/* Container Habits */
 
@@ -482,8 +482,8 @@ header img {
 		display: flex;
 		border: 1.4px solid #ebebeb;
 		border-radius: 4px;
-		width: 90%;
-		color: #343a40;
+		width: 95%;
+		color: var(--color-grey-2);
 		font-weight: 500;
 		font-size: 16px;
 		height: 50px;
@@ -492,8 +492,8 @@ header img {
 	.container--habits--data input {
 		display: flex;
 		align-self: center;
-		margin-left: 0px;
-	}
+		margin-left: 3%
+		}
 
 	:checked + p {
 		text-decoration: line-through;
@@ -532,8 +532,8 @@ header img {
 	}
 
 	.container--habits--dataEdit button {
-		background-color: #ffffff;
-		color: #adb5bd;
+		background-color: var(--color-grey-6);
+		color: var(--color-grey-3);
 		border: none;
 		font-size: 36px;
 		margin-left: 3%;
@@ -546,9 +546,9 @@ header img {
 	}
 
 	.container--habits--footer button {
-		background-color: #415af3;
-		color: #ffffff;
-		border: 2px solid #415af3;
+		background: var(--color-brand-1);
+		color: var(--color-grey-6);
+		border: 2px solid var(--color-brand-1);
 		font-size: 14px;
 		border-radius: 4px;
 		padding: 12px 28px;

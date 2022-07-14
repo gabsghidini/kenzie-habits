@@ -1,31 +1,22 @@
-<div class="body_modal">
+<div class="body_modal body_modal_create">
 	<div class="modal_habits" id="modal_box">
 		<div class="upside">
 			<h1>Criar Hábito</h1>
 			<div class="close_card_div">
 				<i class="close_card_button">x</i>
 			</div>
+
 		</div>
-		<form class="modal_form">
+		<form class="modal_form modal_create">
 			<label for="Título" class="text">Título</label>
-			<input
-				type="text"
-				name="Título"
-				id="title"
-				placeholder="Digitar Título"
-			/>
+			<input type="text" name="Título" id="title" placeholder="Digitar Título" required>
 
 			<label for="Descrição" class="text">Descrição</label>
-			<input
-				type="text"
-				name="Descrição"
-				id="description"
-				placeholder="Digitar descrição"
-			/>
+			<input type="text" name="Descrição" id="description" placeholder="Digitar descrição" required>
 
 			<label for="category" class="text">Categoria</label>
-			<select id="category" name="category">
-				<option selected disabled>Selecionar Categoria</option>
+			<select id="category" name="category" required>
+				<option "">Selecionar Categoria</option>
 				<option value="saude">Saúde</option>
 				<option value="estudos">Estudos</option>
 				<option value="casa">Casa</option>
@@ -35,5 +26,6 @@
 
 			<button type="submit" class="send">Inserir</button>
 		</form>
+
 	</div>
 </div>

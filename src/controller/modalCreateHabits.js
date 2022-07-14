@@ -4,24 +4,17 @@ import Habits from "./habits.controller.js";
 setTimeout(addOnClickEvents, 1500);
 
 function addOnClickEvents() {
-	closeModal(".body_modal");
+    closeModal('.body_modal_create')
 
-	let criarHabitButton = document.querySelector(
-		".container--title--buttonCriar"
-	);
-	criarHabitButton.addEventListener("click", function () {
-		openModal(".body_modal");
-	});
+    let criarHabitButton = document.querySelector(".container--title--buttonCriar")
+    criarHabitButton.addEventListener("click", function(){openModal('.body_modal_create')})
 
-	let closeModalButton1 = document.querySelector(".close_card_div");
-	closeModalButton1.addEventListener("click", function () {
-		closeModal(".body_modal");
-	});
+    let closeModalButton1 = document.querySelector(".close_card_div")
+    closeModalButton1.addEventListener("click", function(){closeModal('.body_modal_create')})
+ 
 
-	let modalForm = document.querySelector(".modal_form");
-	modalForm.addEventListener("submit", function (e) {
-		sendHabits(e);
-	});
+    let modalForm = document.querySelector(".modal_create")
+    modalForm.addEventListener("submit", function(e){sendHabits(e)})
 }
 
 function closeModal(elementToClose) {

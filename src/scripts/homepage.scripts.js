@@ -43,25 +43,32 @@ logOut()
 
 HomepageController.listCards();
 
-addCreateHabitModal();
+//Adiciona modal Create Habits
+addModal("src/views/modalCreateHabits.html", "./src/controller/modalCreateHabits.js")
 
-function addCreateHabitModal() {
-	fetch("src/views/modalCreateHabits.html")
-		.then((data) => {
-			return data.text();
-		})
-		.then((data) => {
-			let body = document.querySelector("body");
-			let footer = document.createElement("footer");
-			footer.innerHTML = footer.innerHTML + data;
-			body.appendChild(footer);
+//Adiciona modal Edit Profile
+addModal("src/views/modalEditProfile.html", "./src/controller/modalEditProfile.js")
 
-			var head = document.getElementsByTagName("head")[0];
-			var script = document.createElement("script");
-			script.type = "module";
-			script.src = "./src/controller/modalCreateHabits.js";
-			head.appendChild(script);
-		});
+//Adiciona modal Delete Habits
+addModal("src/views/modalDeleteHabits.html", "./src/controller/modalDeleteHabits.js")
+
+function addModal(viewPath, scriptPath) {
+    fetch(viewPath)
+        .then(data => {
+            return data.text()
+        })
+        .then(data => {
+            let body = document.querySelector("body")
+            let div = document.createElement("div")
+            div.innerHTML = div.innerHTML + data;
+            body.appendChild(div)
+
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = scriptPath;
+            head.appendChild(script);
+        })
 }
 
 function init() {
