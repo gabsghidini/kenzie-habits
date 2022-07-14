@@ -37,12 +37,9 @@ class HomepageController {
 
 		const user = JSON.parse(userData);
 
-		console.log(user);
-
 		const userHeader = document.querySelector(".user__image--header");
 		const userProfileImage = document.querySelector(".user__image--profile");
 
-		console.log(userProfileImage);
 		const userProfileName = document.querySelector(".user__name");
 
 		userProfileName.innerText = user.usr_name;
