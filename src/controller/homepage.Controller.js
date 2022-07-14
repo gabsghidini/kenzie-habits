@@ -34,17 +34,17 @@ class HomepageController {
 
 	static loadUserData() {
 		const userData = localStorage.getItem("@kenzie-habits:user");
+
 		const user = JSON.parse(userData);
 
 		const userHeader = document.querySelector(".user__image--header");
-		const userProfileImage = document.querySelector(
-			".user__image--profile"
-		);
+		const userProfileImage = document.querySelector(".user__image--profile");
+
 		const userProfileName = document.querySelector(".user__name");
 
+		userProfileName.innerText = user.usr_name;
 		userHeader.src = user.usr_image;
 		userProfileImage.src = user.usr_image;
-		userProfileName.innerText = user.usr_name;
 	}
 
 	static habitCompletionController() {

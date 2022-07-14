@@ -12,7 +12,6 @@ export default class Login {
 			.then((response) => response.json())
 			.then((resp) => {
 
-        console.log(resp);
         const token = JSON.stringify(resp.token);
         const response = JSON.stringify(resp.response);
 
@@ -27,19 +26,6 @@ export default class Login {
 	static logout() {
 		localStorage.clear();
 	
-		window.location.href = "../index.html";
+		window.location.href = "index.html";
 	  }
 }
-
-/*
-
-{
-    "response": {
-        "usr_name": "Grupo5 Nicoletl",
-        "usr_email": "grupo5Nicole@mail.com",
-        "usr_image": "https://www.google.com/images/Nicole"
-    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTc4MTAwNTcsImV4cCI6MTY1ODQxNDg1Nywic3ViIjoiMzAifQ.YBtPAgdmxI0ecRmAQo1XBD7aeIqABLIQK5ZUM2Swohg"
-}
-
-*/

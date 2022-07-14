@@ -28,10 +28,6 @@ btnLogin.addEventListener("click", function (event) {
 
 	const token = localStorage.getItem("@kenzie-habits:token");
 
-	if (token === null) {
-		window.alert("Faça Login para Continuar.");
-	}
-
 	if (token === undefined) {
 		window.alert("Email ou senha incorreto. Tente novamente.");
 	}

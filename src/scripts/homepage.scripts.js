@@ -5,8 +5,6 @@ import Login from "../controller/login.controller.js"
 function dropDown() {
 	const btnDrop = document.querySelector("#btnDrop")
 	const menu = document.querySelector(".dropdown-content")
-	const linkModal = document.querySelector("#editProfile")
-	const modal = document.querySelector(".body_modal")
 
 	function toggle() {
 		if (menu.classList.contains("dropdown-content-show")) {
@@ -26,9 +24,6 @@ function dropDown() {
 		toggle()
 	})
 
-	linkModal.addEventListener("click", function () {
-		showModal()
-	})
 }
 dropDown()
 
@@ -75,7 +70,7 @@ function init() {
 	HomepageController.loadUserData();
 
 	setTimeout(() => {
-        console.log("3 segundos depois do carregamento da pagina, os listeners são ativados");
+        //console.log("3 segundos depois do carregamento da pagina, os listeners são ativados");
         HomepageController.habitCompletionController();
     }, 3000);
 }

@@ -122,7 +122,6 @@ export default class Homepage {
 		footerButton.id = "btnReload"
 		footerButton.type = "button"
 		footerButton.setAttribute("onclick", "window.location.reload()");
-
 		footer.append(footerButton);
 
 		return footer;
