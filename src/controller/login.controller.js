@@ -11,17 +11,17 @@ export default class Login {
 		})
 			.then((response) => response.json())
 			.then((resp) => {
-				localStorage.setItem(
-					"@kenzie-habits:user",
-					JSON.stringify(resp.response)
-				);
-				localStorage.setItem(
-					"@kenzie-habits:token",
-					JSON.stringify(resp.token)
-				);
+
+        console.log(resp);
+        const token = JSON.stringify(resp.token);
+        const response = JSON.stringify(resp.response);
+
+        localStorage.setItem("@kenzie-habits:user", response);
+        localStorage.setItem("@kenzie-habits:token", token);
+
 				return resp;
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => window.alert(err));
 	}
 
 	static logout() {
@@ -30,3 +30,16 @@ export default class Login {
 		window.location.href = "../index.html";
 	  }
 }
+
+/*
+
+{
+    "response": {
+        "usr_name": "Grupo5 Nicoletl",
+        "usr_email": "grupo5Nicole@mail.com",
+        "usr_image": "https://www.google.com/images/Nicole"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTc4MTAwNTcsImV4cCI6MTY1ODQxNDg1Nywic3ViIjoiMzAifQ.YBtPAgdmxI0ecRmAQo1XBD7aeIqABLIQK5ZUM2Swohg"
+}
+
+*/
