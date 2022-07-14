@@ -1,23 +1,23 @@
 import Habits from "./habits.controller.js";
 
-document.addEventListener("DOMContentLoaded", addOnClickEvents);
+setTimeout(addOnClickEvents, 1500)
 
 function addOnClickEvents() {
-	/*let openModalButton = document.querySelector(".open_modal")
-    openModalButton.addEventListener("click", function(){openModal('.modal_habits')})*/
+	let openModalButton = document.querySelector(".container--habits--dataEdit")
+	openModalButton.addEventListener("click", function () { openModal('.body_modal_delete') })
 
-	let closeModalButton1 = document.querySelector(".close_card_div");
+	let closeModalButton1 = document.querySelector(".close_card_div_delete");
 	closeModalButton1.addEventListener("click", function () {
-		closeModal(".modal_habits--delete");
+		closeModal(".body_modal_delete");
 	});
 
 	let closeModalButton2 = document.querySelector("#cancel");
 	closeModalButton2.addEventListener("click", function () {
-		closeModal(".modal_habits--delete");
+		closeModal(".body_modal_delete");
 	});
 
-	//let modalForm = document.querySelector(".modal_form")
-	//modalForm.addEventListener("submit", function(e){sendHabits(e)})
+	let modalForm = document.querySelector(".modal_form_delete")
+	modalForm.addEventListener("submit", function (e) { sendHabits(e) })
 }
 
 function closeModal(elementToClose) {
@@ -25,6 +25,7 @@ function closeModal(elementToClose) {
 }
 
 function openModal(elementToClose) {
+	console.log(11111)
 	document.querySelector(elementToClose).style.display = "flex";
 }
 
