@@ -50,6 +50,7 @@ class Homepage {
 		statusCategory.innerText = "Categoria";
 		statusEdit.innerText = "Editar";
 
+
 		header.append(
 			statusHeader,
 			statusTitle,
@@ -79,10 +80,16 @@ class Homepage {
 		dataEdit.classList.add("container--habits--dataEdit");
 
 		dataInput.type = "checkbox";
-		dataInput.id = this.id;
-		dataInput.classList.add("checkbox")
+		dataInput.id = this.id;	
 		dataInput.name = "checkbox" + this.id;
 		dataInput.value = "checkbox" + this.id;
+		
+		console.log(this.status)
+		console.log(this)
+		
+		if (this.status) {
+			dataInput.checked = true
+		}
 
 		dataLabel.for = dataInput.name;
 		dataTitle.innerText = this.title;
@@ -109,14 +116,17 @@ class Homepage {
 	getCardFooter() {
 		const footer = document.createElement("div");
 		const footerButton = document.createElement("button");
+		const footerButtonIcon = document.createElement("style")
 
 		footer.classList.add("container--habits--footer");
 
-		footerButton.innerText = "Carregar Mais";
+		footerButton.innerText = "Atualizar";
+		footerButton.append(footerButtonIcon);
 		footer.append(footerButton);
 
 		return footer;
 	}
 }
+
 
 export default Homepage;
