@@ -114,12 +114,12 @@ class Homepage {
 	getCardFooter() {
 		const footer = document.createElement("div");
 		const footerButton = document.createElement("button");
-		const footerButtonIcon = document.createElement("style")
-
+	
+		footerButton.classList.add("container--habits--footer--btn");
 		footer.classList.add("container--habits--footer");
-
+		
+		
 		footerButton.innerText = "Atualizar";
-		footerButton.append(footerButtonIcon);
 		footer.append(footerButton);
 
 		return footer;

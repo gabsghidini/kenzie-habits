@@ -336,15 +336,25 @@ header img {
 	margin-top: 5%;
 }
 
-.container--habits--footer button {
-	background-color: var(--color-brand-1);
+.container--habits--footer--btn {
+	background: linear-gradient(to left, var(--color-brand-1) 50%, var(--color-brand-3) 50%);
+  	background-size: 200% 100%;
+  	background-position: right bottom;
+  	transition: all .5s ease-out;
 	color: var(--color-grey-6);
-	border: 2px solid var(--color-brand-1);
-	font-size: 14px;
-	border-radius: 4px;
 	padding: 12px 28px;
+	border: 0px solid var(--color-brand-1);
+	border-radius: 4px;
+	transition-property: all;
+	transition-duration: 1s;
 	margin-bottom: 2%;
 }
+
+.container--habits--footer--btn:hover {
+		background-position: left bottom;
+		color: var(--color-brand-1);
+}
+
 
 @media screen and (max-width: 768px) {
 	body {
@@ -544,13 +554,5 @@ header img {
 		margin-top: 5%;
 		margin-bottom: 5%;
 	}
-
-	.container--habits--footer button {
-		background: var(--color-brand-1);
-		color: var(--color-grey-6);
-		border: 2px solid var(--color-brand-1);
-		font-size: 14px;
-		border-radius: 4px;
-		padding: 12px 28px;
-	}
 }
+

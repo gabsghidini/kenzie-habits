@@ -201,21 +201,24 @@ h3{
 }
 
 .send{
-    background: #415AF3;
-    border: 0.125rem solid #415AF3;
+    background: linear-gradient(to left, var(--color-brand-1) 50%, var(--color-brand-3) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    transition-property: all;
+	transition-duration: 1s;
+    color: var(--color-grey-6);
+    border:none;
     border-radius: 0.25rem;
     width: 16rem;
     height: 2.5rem;
     font-family: 'Inter';
     font-style: normal;
-    color: white;
     cursor: pointer;
 }
 .send:hover{
-    background: white;
-    border: 0.025rem solid #415AF3;
-    color: #415AF3;
-    transition: 150ms;
+    background-position: left bottom;
+	color: var(--color-brand-1);
 }
 .sendDecision{
     box-sizing: border-box;
