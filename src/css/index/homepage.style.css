@@ -283,6 +283,8 @@ header img {
 	padding: 12px 28px;
 	border: 0px solid var(--color-brand-1);
 	border-radius: 4px;
+	font-size: 1.1rem;
+	font-weight: 500;
 	transition-property: all;
 	transition-duration: 1s;
 	margin-bottom: 2%;
