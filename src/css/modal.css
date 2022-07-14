@@ -23,6 +23,25 @@
     width: 100vw;
     margin: 0%;
 }
+.modal_edit_habits {
+    width: 15.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0.875rem;
+}
+.modal_edit_form {
+    width: 15.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0.875rem;
+}
+
 #modal_box{
     width: 15.5rem;
     background-color: white;
@@ -92,7 +111,13 @@ h3{
     gap: 1rem;
 
 }
-
+.modal_edit_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0.875rem;
+    gap: 1.1rem;
+}
 .text{
     font-family: 'Inter';
     font-style: normal;
@@ -207,16 +232,74 @@ h3{
     height: 2.5rem;
     width: 7.5rem;
     cursor: pointer;
-    
-
 }
-.sendDecision:hover {
+.sendCancel{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    height: 2.5rem;
+    width: 7.5rem;
+    cursor: pointer;
+}
+.sendCancel:hover{
+    background: #415AF3;
+    border: 0.025rem solid #415AF3;
+    color: #FFFFFF;
+    transition: 150ms;
+}
+ .sendDecision:hover {
     background: #E64445;
     border: 0.125rem solid #E64445;
     border-radius: 0.25rem;
     color: #FFFF;
     ;
 }
+.btns {
+    display: flex;
+    width: 100%;
+}
+
+.remove {
+    background-color: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    width: 16rem;
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #343A40;
+    cursor: pointer;
+}
+
+.remove:hover {
+    background-color: #E9ECEF;
+    color: #343A40;
+}
+
+.update {
+    background: #A0ADF9;
+    border: 0.125rem solid #A0ADF9;
+    border-radius: 0.25rem;
+    width: 16rem;
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    color: white;
+    cursor: pointer;
+}
+
+.update:hover {
+    background: #415AF3;
+    border: 0.025rem solid #415AF3;
+    color: #FFFFFF;
+    transition: 150ms;
+}
+
 @media(min-width:769px) {
     
     #modal_box{
@@ -228,6 +311,14 @@ h3{
         width: 27.5rem;
     
     } 
+    .modal_edit_habits {
+        width: 29.5rem;
+    }
+    
+    .modal_edit_form {
+        width: 27.5rem;
+    } 
+        
     .upside{
         width: 27.5rem;
         justify-content: space-between;
@@ -255,5 +346,11 @@ h3{
         width: 14rem;
     }
     
-
+    .remove {
+        width: 27.5rem;
+    }
+    
+    .update {
+        width: 27.5rem;
+    }
 }
