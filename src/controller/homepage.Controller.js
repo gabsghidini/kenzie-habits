@@ -12,7 +12,7 @@ class HomepageController {
 		session.appendChild(cardTitle);
 		session.appendChild(cardHabitsTitle);
 
-        habitsDataBase.forEach((habits) => {
+		habitsDataBase.forEach((habits) => {
 			const Habits = new Homepage(
 				habits.habit_id,
 				habits.habit_title,
@@ -36,16 +36,33 @@ class HomepageController {
 		const userData = localStorage.getItem("@kenzie-habits:user");
 		const user = JSON.parse(userData);
 
-        const userHeader = document.querySelector(".user__image--header");
-        const userProfileImage = document.querySelector(".user__image--profile");
-        const userProfileName = document.querySelector(".user__name");
+		const userHeader = document.querySelector(".user__image--header");
+		const userProfileImage = document.querySelector(
+			".user__image--profile"
+		);
+		const userProfileName = document.querySelector(".user__name");
 
-        userHeader.src = user.usr_image;
-        userProfileImage.src = user.usr_image;
-        userProfileName.innerText = user.usr_name;
+		userHeader.src = user.usr_image;
+		userProfileImage.src = user.usr_image;
+		userProfileName.innerText = user.usr_name;
+	}
+
+	static habitCompletionController() {
+		const checkbox = document.querySelectorAll(".checkbox");
+		checkbox.forEach((item) => {
+			item.addEventListener("change", function () {
+				if (this.checked) {
+					const habitId = this.id;
+					Habits.completeHabit(habitId);
+					HomepageController.habitCompletionController();
+				} else {
+					const habitId = this.id;
+					Habits.uncompleteHabit(habitId);
+					HomepageController.habitCompletionController();
+				}
+			});
+		});
 	}
 }
 
 export default HomepageController;
-
-HomepageController.loadUserData()
