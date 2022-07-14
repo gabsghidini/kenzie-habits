@@ -19,6 +19,25 @@
 			href="./src/assets/svg/icon.svg"
 			type="image/x-icon"
 		/>
+
+		<script>
+		function loadEditModal(id) {
+			id_habit = document.querySelector("#id_habit");
+			title = document.querySelector("#title_edit");
+			description = document.querySelector("#description_edit");
+			category = document.querySelector("#category_edit");
+
+			id_habit.value = id
+			title.value = document.querySelector("#title_"+id).innerHTML;
+			description.value = document.querySelector("#description_"+id).innerHTML;
+			category.value = document.querySelector("#category_"+id).innerHTML;	
+			
+			
+			let criarHabitButton = document.querySelector(".container--habits--dataEdit")
+
+			document.querySelector(".body_modal_edit_habits").style.display = "flex";
+		}
+		</script>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<title>Kenzie Habit</title>
 	</head>

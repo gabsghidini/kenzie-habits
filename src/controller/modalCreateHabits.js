@@ -32,7 +32,7 @@ async function sendHabits(event) {
 	let descriptionValue = document.querySelector("#description").value;
 	let categoryValue = document.querySelector("#category").value;
 
-	if ((titleValue + descriptionValue).length == 0) {
+	if ((titleValue + descriptionValue + categoryValue).length == 20) {
 		alert("Todos os campos devem estar preenchidos");
 	} else {
 		let habit = new Habit(
@@ -46,6 +46,7 @@ async function sendHabits(event) {
 		if (ans != null) {
 			alert("Seu habito foi adicionado com sucesso");
 			closeModal(".body_modal");
+			document.location.reload(true);
 		} else {
 			alert("Detectamos um erro ao adicionar. Tente mais tarde.");
 		}

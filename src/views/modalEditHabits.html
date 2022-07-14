@@ -1,46 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/modal.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="body_modal">
-    <div class="modal_edit_habits">
-            <div class="upside">
-                <h1>Editar hábito</h1>
-                <div class="close_card_div">
-                    <i class="close_card_button">x</i>
-                </div>
+<div class="body_modal body_modal_edit_habits">
+    <div class="modal_edit_habits" id="modal_box">
+        <div class="upside">
+            <h1>Editar hábito</h1>
+            <div class="close_habit_div_edit">
+                <i class="close_card_button">x</i>
             </div>
-        
-            <form class="modal_edit_form">
-                <label for="Título" class="text">Título</label>
-                <input type="text" name="titulo" id="title" placeholder="">
-
-                <label for="Descrição" class="text">Descrição</label>
-                <input type="text" name="descricao" id="description" placeholder="">
-
-                <label for="category" class="text">Categoria</label>
-                <select name="category" id="category">
-                    <option selected disabled>Selecionar Categoria</option>
-                    <option value="saude">Saúde</option>
-                    <option value="estudos">Estudos</option>
-                    <option value="casa">Casa</option>
-                    <option value="trabalho">Trabalho</option>
-                    <option value="lazer">Lazer</option>
-                </select>
-                <div class="btns">
-                    <button type="submit" class="remove">Excluir</button>
-                    <button type="submit" class="update">Salvar alterações</button>
-                </div>
-            </form>
         </div>
-    </div>
-    
 
-</body>
-</html>
+        <form class="modal_form modal_edit_habit_form">
+            <input type="hidden" name="id_habit" id="id_habit">
+
+            <label for="Título" class="text">Título</label>
+            <input type="text" name="titulo" class="title" id="title_edit" placeholder="">
+
+            <label for="Descrição" class="text">Descrição</label>
+            <input type="text" name="descricao" class="description" id="description_edit" placeholder="">
+
+            <label for="category" class="text">Categoria</label>
+            <select name="category" class="category" id="category_edit">
+                <option selected disabled>Selecionar Categoria</option>
+                <option value="saude">Saúde</option>
+                <option value="estudos">Estudos</option>
+                <option value="casa">Casa</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="lazer">Lazer</option>
+            </select>
+            <div class="btns">
+                <button type="button" class="remove removeHabit">Excluir</button>
+                <button type="submit" class="update updateHabit">Salvar alterações</button>
+            </div>
+        </form>
+    </div>
+</div>
