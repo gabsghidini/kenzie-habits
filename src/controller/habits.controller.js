@@ -151,6 +151,14 @@ export default class Habits {
 
 		return onlyCompleteHabits;
 	}
-}
 
-Habits.onlyCompleteHabits();
+	static async onlyIncompleteHabits () {
+		const habits = await Habits.getHabits();
+
+		const onlyIncompleteHabits = habits.filter((habit) => {
+			return habit.habit_status === false;
+		})
+
+		return onlyIncompleteHabits;
+	}
+}
