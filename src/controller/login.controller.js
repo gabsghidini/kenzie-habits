@@ -12,7 +12,6 @@ export default class Login {
 			.then((response) => response.json())
 			.then((resp) => {
 
-        console.log(resp);
         const token = JSON.stringify(resp.token);
         const response = JSON.stringify(resp.response);
 

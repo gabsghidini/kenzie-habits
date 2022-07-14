@@ -84,9 +84,7 @@ class Homepage {
 		dataInput.name = "checkbox" + this.id;
 		dataInput.value = "checkbox" + this.id;
 		
-		console.log(this.status)
-		console.log(this)
-		
+	
 		if (this.status) {
 			dataInput.checked = true
 		}

@@ -25,7 +25,6 @@ function closeModal(elementToClose) {
 }
 
 function openModal(elementToClose) {
-	console.log(11111)
 	document.querySelector(elementToClose).style.display = "flex";
 }
 

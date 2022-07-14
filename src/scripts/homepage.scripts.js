@@ -75,7 +75,7 @@ function init() {
 	HomepageController.loadUserData();
 
 	setTimeout(() => {
-        console.log("3 segundos depois do carregamento da pagina, os listeners são ativados");
+        //console.log("3 segundos depois do carregamento da pagina, os listeners são ativados");
         HomepageController.habitCompletionController();
     }, 3000);
 }
