@@ -117,7 +117,6 @@ export default class Habits {
 		return await fetch(`${Habits.base_url}/complete/${id}`, options)
 			.then((res) => res.json())
 			.then((res) => {
-				window.alert("Habit completed!");
 				return res
 			})
 			.catch((err) => console.log(err));
