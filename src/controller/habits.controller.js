@@ -158,7 +158,6 @@ export default class Habits {
 		const onlyIncompleteHabits = habits.filter((habit) => {
 			return habit.habit_status === false;
 		})
-
 		return onlyIncompleteHabits;
 	}
 }
