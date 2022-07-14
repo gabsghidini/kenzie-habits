@@ -119,4 +119,26 @@ export default class Habits {
 			.then((res) => res)
 			.catch((err) => console.log(err));
 	}
+
+	static async uncompleteHabit(id) {
+		const rawToken = localStorage.getItem("@kenzie-habits:token");
+
+		const token = rawToken.replace(/\"/g, "");
+
+		const options = {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: `Bearer ${token}`,
+			},
+			body: JSON.stringify({
+				habit_status: false,
+			}),
+		};
+
+		return await fetch(`${Habits.base_url}/complete/${id}`, options)
+			.then((res) => res.json())
+			.then((res) => res)
+			.catch((err) => console.log(err));
+	}
 }

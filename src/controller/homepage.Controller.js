@@ -46,8 +46,23 @@ class HomepageController {
 		userProfileImage.src = user.usr_image;
 		userProfileName.innerText = user.usr_name;
 	}
+
+	static habitCompletionController() {
+		const checkbox = document.querySelectorAll(".checkbox");
+		checkbox.forEach((item) => {
+			item.addEventListener("change", function () {
+				if (this.checked) {
+					const habitId = this.id;
+					Habits.completeHabit(habitId);
+					HomepageController.habitCompletionController();
+				} else {
+					const habitId = this.id;
+					Habits.uncompleteHabit(habitId);
+					HomepageController.habitCompletionController();
+				}
+			});
+		});
+	}
 }
 
 export default HomepageController;
-
-HomepageController.loadUserData();

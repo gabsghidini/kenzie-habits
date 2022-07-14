@@ -80,6 +80,7 @@ class Homepage {
 
 		dataInput.type = "checkbox";
 		dataInput.id = this.id;
+		dataInput.classList.add("checkbox")
 		dataInput.name = "checkbox" + this.id;
 		dataInput.value = "checkbox" + this.id;
 
