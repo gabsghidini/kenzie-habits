@@ -14,7 +14,7 @@ function loadContent() {
     nameInput.value = storedUser.usr_name;
     urlInput.value = storedUser.usr_image;
 
-    let editarHabitButton = document.querySelector(".user__image--header")
+    let editarHabitButton = document.querySelector("#editProfile")
     editarHabitButton.addEventListener("click", function () { openModal('.body_modal_edit') })
 
     let closeModalButton = document.querySelector(".close_card_div_edit")
