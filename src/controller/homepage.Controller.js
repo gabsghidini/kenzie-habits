@@ -2,9 +2,8 @@ import Habits from "./habits.controller.js";
 import Homepage from "../models/homepage.models.js";
 
 class HomepageController {
-	static async listCards() {
+	static async listCards(habitsDataBase) {
 		const session = document.getElementById("container");
-		const habitsDataBase = await Habits.onlyIncompleteHabits();
 
 		const titleHabits = new Homepage();
 		const cardTitle = titleHabits.getCardTitle();
