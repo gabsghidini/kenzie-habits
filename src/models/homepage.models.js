@@ -64,6 +64,7 @@ export default class Homepage {
 
 	getCardHabitsDate() {
 		const dataLabel = document.createElement("label");
+		dataLabel.id = "label_" + this.id
 		const data = document.createElement("div");
 		const dataInput = document.createElement("input");
 		const dataTitle = document.createElement("p");
@@ -75,9 +76,13 @@ export default class Homepage {
 
 		data.classList.add("container--habits--data");
 		dataTitle.classList.add("container--habits--dataTitle");
+		dataTitle.id = "title_" + this.id;
 		dataDescription.classList.add("container--habits--dataDescription");
+		dataDescription.id = "description_" + this.id;
 		dataCategory.classList.add("container--habits--dataCategory");
 		dataEdit.classList.add("container--habits--dataEdit");
+		dataEdit.id = "edit_" + this.id;
+		dataEdit.setAttribute("onclick", "loadEditModal('"+this.id+"')"); 
 
 		dataInput.type = "checkbox";
 		dataInput.id = this.id;	
@@ -93,6 +98,7 @@ export default class Homepage {
 		dataDescription.innerText = this.description;
 
 		dataCategorySpan.innerText = this.category;
+		dataCategorySpan.id = "category_" + this.id
 		dataCategory.appendChild(dataCategorySpan);
 
 		dataButton.innerText = "•••";

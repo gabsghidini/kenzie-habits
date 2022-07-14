@@ -47,6 +47,10 @@ addModal("src/views/modalEditProfile.html", "./src/controller/modalEditProfile.j
 //Adiciona modal Delete Habits
 addModal("src/views/modalDeleteHabits.html", "./src/controller/modalDeleteHabits.js")
 
+//Adiciona modal Edit Habits
+addModal("src/views/modalEditHabits.html", "./src/controller/modalEditHabits.js")
+
+
 function addModal(viewPath, scriptPath) {
     fetch(viewPath)
         .then(data => {

@@ -128,7 +128,7 @@ h3{
 
    
 }
-#title{
+.title{
     box-sizing: border-box;
     background: #F1F3F5;
     border: 0.125rem solid #F1F3F5;
@@ -142,7 +142,7 @@ h3{
    
 }
 
-#description{
+.description{
     box-sizing: border-box;
     background: #F1F3F5;
     border: 0.125rem solid #F1F3F5;
@@ -157,7 +157,7 @@ h3{
 
 
 }
-#category{
+.category{
     box-sizing: border-box;
     background: #F1F3F5;
     border: 0.125rem solid #F1F3F5;
