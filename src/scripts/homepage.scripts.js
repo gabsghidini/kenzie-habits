@@ -1,4 +1,40 @@
 import HomepageController from "../controller/homepage.Controller.js";
+import Login from "../controller/login.controller.js"
+// import EditProfile from "../controller/modalEditProfile.js";
+
+function dropDown() {
+	const btnDrop = document.querySelector("#btnDrop")
+	const menu = document.querySelector(".dropdown-content")
+
+	function toggle() {
+		if (menu.classList.contains("dropdown-content-show")) {
+			menu.classList.remove("dropdown-content-show")
+			
+		} else {
+			menu.classList.add("dropdown-content-show")
+			
+		}
+	}
+
+	function showModal() {
+		modal.style.display = 'block'
+	}
+
+	btnDrop.addEventListener("click", function () {
+		toggle()
+	})
+
+}
+dropDown()
+
+function logOut() {
+	const exit = document.querySelector("#logout")
+
+	exit.addEventListener("click", function () {
+		Login.logout()
+	})
+}
+logOut()
 
 HomepageController.listCards();
 
@@ -34,9 +70,8 @@ function init() {
 	HomepageController.loadUserData();
 
 	setTimeout(() => {
-        console.log("3 segundos depois do carregamento da pagina, os listeners são ativados");
+        //console.log("3 segundos depois do carregamento da pagina, os listeners são ativados");
         HomepageController.habitCompletionController();
     }, 3000);
 }
-
 init();

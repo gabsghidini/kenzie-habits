@@ -25,16 +25,25 @@
 	<body>
 		<header>
 			<p>KenzieHabit</p>
-			<figure><img class="user__image--header" src="#" /></figure>
+			
+			<div class="dropdown">
+				<button class="dropbtn" id="btnDrop"><img src="src/assets/img/" class="user__image--header" alt=""></button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="#" id="editProfile">Editar Perfil</a>
+					<a href="#" id="logout">Sair do app</a>
+
+				</div>
+			</div>
 		</header>
 		<main>
 			<section id="userDate">
-				<figure><img class="user__image--profile" src="#" /></figure>
+				<figure><img class="user__image--profile" src="./src/assets/svg/icon.svg" /></figure>
 				<p class="user__name">Jana Doe</p>
 			</section>
 
 			<section id="container"></section>
 		</main>
-		<script type="module" src="./src/scripts/homepage.scripts.js"></script>
+		<script type="module" src="./src/scripts/homepage.scripts.js">
+		</script>
 	</body>
 </html>

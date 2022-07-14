@@ -11,16 +11,21 @@ export default class Login {
 		})
 			.then((response) => response.json())
 			.then((resp) => {
-				localStorage.setItem(
-					"@kenzie-habits:user",
-					JSON.stringify(resp.response)
-				);
-				localStorage.setItem(
-					"@kenzie-habits:token",
-					JSON.stringify(resp.token)
-				);
+
+        const token = JSON.stringify(resp.token);
+        const response = JSON.stringify(resp.response);
+
+        localStorage.setItem("@kenzie-habits:user", response);
+        localStorage.setItem("@kenzie-habits:token", token);
+
 				return resp;
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => window.alert(err));
 	}
+
+	static logout() {
+		localStorage.clear();
+	
+		window.location.href = "index.html";
+	  }
 }
