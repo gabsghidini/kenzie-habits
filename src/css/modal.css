@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body{
-    background-color: rgb(0,0,0,0.6);
-    display: flex;
+.body_modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.4);
+    display: none;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0%;
 }
-.modal_habits{
+#modal_box{
     width: 15.5rem;
     background-color: white;
     border-radius: 0.5rem;
@@ -14,7 +20,6 @@ body{
     align-items: center;
     padding: 1.5rem 0.875rem;
 }
-
 
 .upside{
 
@@ -41,14 +46,39 @@ h1{
     color: #ADB5BD;
     cursor: pointer;
 }
+h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: black;
+    text-align: center;
+}
+h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.750rem;
+    line-height: 1.5rem;
+    color: #343A40;
+    text-align: center
+
+}
+
 .modal_form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5rem 0.875rem;
     gap: 1.1rem;
+}
+.modal_form_delete{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0.875rem;
+    gap: 1rem;
 
-   
 }
 
 .text{
@@ -104,6 +134,35 @@ h1{
     cursor: pointer;
     width: 100%;
 }
+#name{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 2.5rem;
+    width: 15.5rem;
+   
+}
+
+#url{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 2.5rem;
+    width: 15.5rem;
+
+
+}
+
 .send{
     background: #415AF3;
     border: 0.125rem solid #415AF3;
@@ -121,12 +180,34 @@ h1{
     color: #415AF3;
     transition: 150ms;
 }
+.sendDecision{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    height: 2.5rem;
+    width: 7.5rem;
+    cursor: pointer;
+    
+
+}
+.sendDecision:hover {
+    background: #E64445;
+    border: 0.125rem solid #E64445;
+    border-radius: 0.25rem;
+    color: #FFFF;
+    ;
+}
 @media(min-width:769px) {
     
-    .modal_habits{
+    #modal_box{
         width: 29.5rem;
     }
-    
+
     .modal_form{
         
         width: 27.5rem;
@@ -136,13 +217,27 @@ h1{
         width: 27.5rem;
         justify-content: space-between;
     }
-   
+   h3{
+    text-align: right;
+    font-size: 0.910rem;
+   }
     #title{   
         width:27.5rem;
+    }
+
+    #name{   
+        width:27.5rem;
+    }
+
+    #url{
+        width:27.5rem;   
     }
     
     .send{
         width: 27.5rem;
+    }
+    .sendDecision{
+        width: 14rem;
     }
     
 
