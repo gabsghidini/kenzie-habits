@@ -33,8 +33,8 @@ async function updateHabits(event) {
 	let descriptionValue = document.querySelector("#description_edit").value;
 	let categoryValue = document.querySelector("#category_edit").value;
 
-	if ((titleValue + descriptionValue).length == 0) {
-		alert("Todos os campos devem estar preenchidos");
+	if (titleValue.length == 0 || descriptionValue.length == 0) {
+		window.alert("Todos os campos devem estar preenchidos");
 	} else {
 		let habit = {
 			habit_title: titleValue,
