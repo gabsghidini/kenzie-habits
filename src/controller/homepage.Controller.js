@@ -4,7 +4,7 @@ import Homepage from "../models/homepage.models.js";
 class HomepageController {
 	static async listCards() {
 		const session = document.getElementById("container");
-		const habitsDataBase = await Habits.getHabits();
+		const habitsDataBase = await Habits.onlyIncompleteHabits();
 
 		const titleHabits = new Homepage();
 		const cardTitle = titleHabits.getCardTitle();
