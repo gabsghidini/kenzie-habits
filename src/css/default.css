@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Brand Colors */
+    --color-brand-1: #415AF3;
+    --color-brand-2: #4150D2;
+    --color-brand-3: #D7E4FB;
+
+    /* Grey Scale Palette */ 
+    --color-grey-1: #212529;
+    --color-grey-2: #343A40;
+    --color-grey-3: #ADB5BD;
+    --color-grey-4: #E9ECEF;
+    --color-grey-5: #F1F3F5;
+    --color-grey-6: #F8F9FA;
+
+    /* Feedback Palette */
+    --color-sucess: #56CF8E;
+    --color-error-1: #E64445;
+    --color-error-2: #F03839;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+

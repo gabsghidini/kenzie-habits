@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.body_modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.4);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0%;
+}
+.body_modal_edit{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.4);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0%;
+}
+.modal_edit_habits {
+    width: 15.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0.875rem;
+}
+.modal_edit_form {
+    width: 15.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0.875rem;
+}
+
+#modal_box{
+    width: 15.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0.875rem;
+}
+
+.upside{
+
+    display: flex;
+    align-items: baseline;
+    width: 18rem;
+    justify-content: space-around;
+}
+
+h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #212529;
+
+}
+.close_card_button{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #ADB5BD;
+    cursor: pointer;
+}
+h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: black;
+    text-align: center;
+}
+h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.750rem;
+    line-height: 1.5rem;
+    color: #343A40;
+    text-align: center
+
+}
+
+.modal_form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0.875rem;
+    gap: 1.1rem;
+}
+.modal_form_delete{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0.875rem;
+    gap: 1rem;
+
+}
+.modal_edit_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0.875rem;
+    gap: 1.1rem;
+}
+.text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.775rem;
+    line-height: 0.5rem;
+    color: #343A40;
+
+   
+}
+.title{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 2.5rem;
+    width: 15.5rem;
+   
+}
+
+.description{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-size: 0.875;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    height: 5rem;
+
+
+}
+.category{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 2.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+#name{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 2.5rem;
+    width: 15.5rem;
+   
+}
+
+#url{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 2.5rem;
+    width: 15.5rem;
+
+
+}
+
+.send{
+    background: linear-gradient(to left, var(--color-brand-1) 50%, var(--color-brand-3) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    transition-property: all;
+	transition-duration: 1s;
+    color: var(--color-grey-6);
+    border:none;
+    border-radius: 0.25rem;
+    width: 16rem;
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    cursor: pointer;
+}
+.send:hover{
+    background-position: left bottom;
+	color: var(--color-brand-1);
+}
+.sendDecision{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    height: 2.5rem;
+    width: 7.5rem;
+    cursor: pointer;
+}
+.sendCancel{
+    box-sizing: border-box;
+    background: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    color: #343A40;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    height: 2.5rem;
+    width: 7.5rem;
+    cursor: pointer;
+}
+.sendCancel:hover{
+    background: #415AF3;
+    border: 0.025rem solid #415AF3;
+    color: #FFFFFF;
+    transition: 150ms;
+}
+ .sendDecision:hover {
+    background: #E64445;
+    border: 0.125rem solid #E64445;
+    border-radius: 0.25rem;
+    color: #FFFF;
+    ;
+}
+.btns {
+    display: flex;
+    width: 100%;
+}
+
+.remove {
+    background-color: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+    width: 16rem;
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #343A40;
+    cursor: pointer;
+}
+
+.remove:hover {
+    background-color: #E9ECEF;
+    color: #343A40;
+}
+
+.update {
+    background: #A0ADF9;
+    border: 0.125rem solid #A0ADF9;
+    border-radius: 0.25rem;
+    width: 16rem;
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    color: white;
+    cursor: pointer;
+}
+
+.update:hover {
+    background: #415AF3;
+    border: 0.025rem solid #415AF3;
+    color: #FFFFFF;
+    transition: 150ms;
+}
+
+@media(min-width:769px) {
+    
+    #modal_box{
+        width: 29.5rem;
+    }
+
+    .modal_form{
+        
+        width: 27.5rem;
+    
+    } 
+    .modal_edit_habits {
+        width: 29.5rem;
+    }
+    
+    .modal_edit_form {
+        width: 27.5rem;
+    } 
+        
+    .upside{
+        width: 27.5rem;
+        justify-content: space-between;
+    }
+   h3{
+    text-align: right;
+    font-size: 0.910rem;
+   }
+    #title{   
+        width:27.5rem;
+    }
+
+    #name{   
+        width:27.5rem;
+    }
+
+    #url{
+        width:27.5rem;   
+    }
+    
+    .send{
+        width: 27.5rem;
+    }
+    .sendDecision{
+        width: 14rem;
+    }
+    
+    .remove {
+        width: 27.5rem;
+    }
+    
+    .update {
+        width: 27.5rem;
+    }
+}

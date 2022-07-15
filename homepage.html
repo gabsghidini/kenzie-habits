@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="src/css/reset.css" />
+		<link rel="stylesheet" href="src/css/default.css" />
+		<link rel="stylesheet" href="src/css/index/homepage.style.css" />
+		<link rel="stylesheet" href="src/css/modal.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./src/assets/svg/icon.svg"
+			type="image/x-icon"
+		/>
+
+		<script>
+		function loadEditModal(id) {
+			id_habit = document.querySelector("#id_habit");
+			title = document.querySelector("#title_edit");
+			description = document.querySelector("#description_edit");
+			category = document.querySelector("#category_edit");
+
+			id_habit.value = id
+			title.value = document.querySelector("#title_"+id).innerHTML;
+			description.value = document.querySelector("#description_"+id).innerHTML;
+			category.value = document.querySelector("#category_"+id).innerHTML;	
+			
+			
+			let criarHabitButton = document.querySelector(".container--habits--dataEdit")
+
+			document.querySelector(".body_modal_edit_habits").style.display = "flex";
+		}
+		</script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<title>Kenzie Habit</title>
+	</head>
+	<body>
+		<header>
+			<p>KenzieHabit</p>
+			
+			<div class="dropdown">
+				<button class="dropbtn" id="btnDrop"><img src="src/assets/img/" class="user__image--header" alt=""></button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="#" id="editProfile">Editar Perfil</a>
+					<a href="#" id="logout">Sair do app</a>
+
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="userDate">
+				<figure><img class="user__image--profile" src="./src/assets/svg/icon.svg" /></figure>
+				<p class="user__name">Jana Doe</p>
+			</section>
+
+			<section id="container"></section>
+		</main>
+		<script type="module" src="./src/scripts/homepage.scripts.js">
+		</script>
+	</body>
+</html>
