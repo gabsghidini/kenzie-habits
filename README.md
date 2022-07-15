@@ -1,30 +1,25 @@
-# 🏆 Entrega: Projeto Capstone
+## Principais conceitos utilizados
 
-Como já foi informado, você e sua equipe irão desenvolver um projeto durante essa semana. Colocando em prática os principais conceitos vistos até o momento em seu projeto. Esses conceitos são:
+OOP
 
-## Principais conceitos
+1.  Sintaxe de classe
+2.  Classes estáticas
 
-### OOP
-
-  #### 1.  Sintaxe de classe
-  #### 2.  Classes estáticas
-
-### Spread Operator
-### Desconstrução
-### Consumo de API;
-### LocalStorage.
-### Manipulação dos elementos com o DOM
+Desconstrução
+Consumo de API;
+LocalStorage.
+Manipulação dos elementos com o DOM
 
 ## Requisitos técnicos/funcionalidades
 
 - **Mobile first:**
 
-  1.  Tela de login deve ser feita em mobile first
-  2.  Tela homepage deve ser feita em mobile first
+  1.  Tela de login feita em mobile first
+  2.  Tela homepage feita em mobile first
 
 - **Tela de Login:**
 
-  1.  Deve ter aparência semelhante ao figma
+  1.  Tem aparência semelhante ao figma
   2.  Botão "Entrar" deve percorrer o formulário e realizar a requisição de login
   3.  Caso a requisição esteja correta deve adicionar o token e dados do usuário no localstorage
   4.  Redirecionar para a homepage caso o email e senha estejam corretos
